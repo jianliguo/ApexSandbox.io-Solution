@@ -1,37 +1,8 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
     //code here
-    String checkDigits = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
-
-    String suffixKey ='';
-
-    if ( fifteenDigit == null ) { 
-        return null;
+    if ( Stirng.isBlank(fifteenDigit) || fifteenDigit.length() < 15 ) {
+        return '-1';
     }
-
-    if ( fifteenDigit.length()!=15 ) { 
-        return '-1'; 
-    }
-
-    For (Integer iChunkSplit=1; iChunkSplit<=3; iChunkSplit++){
-
-        Integer iAsciiCode = 0;
-
-        For (Integer iCurseur = 1; iCurseur<=5; iCurseur++){
-
-            Integer iPos = (iChunkSplit-1)*5 + (iCurseur-1);
-
-            String sChar = fifteenDigit.substring(iPos,iPos+1);
-
-            Integer iIsCharUppercase = sChar.isAllUpperCase()?1:0;
-
-            iAsciiCode += iIsCharUppercase * Integer.valueOf(Math.pow(2,iCurseur-1));
-
-        }
-
-        suffixKey += checkDigits.substring(iAsciiCode,iAsciiCode+1);
-
-    }
-
-    return (fifteenDigit+suffixKey);
+    return (String) Id.valueOf(fifteenDigit);
 }
