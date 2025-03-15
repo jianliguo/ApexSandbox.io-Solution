@@ -1,13 +1,17 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
     //code here
-    String sLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
+    String checkDigits = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
-    String sKey='';
+    String suffixKey ='';
 
-    if (fifteenDigit==null) { return null; }
+    if ( fifteenDigit == null ) { 
+        return null;
+    }
 
-    if (fifteenDigit.length()!=15) { return '-1'; }
+    if ( fifteenDigit.length()!=15 ) { 
+        return '-1'; 
+    }
 
     For (Integer iChunkSplit=1; iChunkSplit<=3; iChunkSplit++){
 
@@ -25,9 +29,9 @@ public String convert15to18DigitId(String fifteenDigit)
 
         }
 
-        sKey += sLetter.substring(iAsciiCode,iAsciiCode+1);
+        suffixKey += checkDigits.substring(iAsciiCode,iAsciiCode+1);
 
     }
 
-    return (fifteenDigit+sKey);
+    return (fifteenDigit+suffixKey);
 }
