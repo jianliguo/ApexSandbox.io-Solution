@@ -36,7 +36,7 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
-        if (lstObject.size() = 0 || lstObject == null) {
+        if (lstObject.size() == 0 || lstObject == null) {
             return false;
         } else {
             return true;
