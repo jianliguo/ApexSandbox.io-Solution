@@ -10,8 +10,9 @@ public class Stack {
         //implement pop
         Integer intSize = lstObject.size();
         if (intSize > 0) {
-            return lstObject[intSize - 1];
+            Object obj = lstObject[intSize - 1];
             lstObject.remove(intSize - 1);
+            return obj;
         } else {
             return null; // exception handler
         }
