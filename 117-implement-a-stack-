@@ -1,0 +1,30 @@
+public class Stack {
+    List<sObject> lstObject = new List<sObject>();
+    
+    public void push(Object obj) {
+        //implement push
+        lstObject.add(obj);
+    }
+    
+    public Object pop() {
+        //implement pop
+        Integer intSize = lstObject.size();
+        if (intSize > 0) {
+            return lstObject[intSize - 1];
+        } s
+
+    }
+    
+    public Integer size() {
+        //implement size
+        return lstObject.size();
+    }
+    
+    public Object peek(){
+        //implement peek
+    }
+    
+    public Boolean isEmpty() {
+        //implement isEmpty
+    }
+}
