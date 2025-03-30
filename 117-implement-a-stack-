@@ -11,7 +11,10 @@ public class Stack {
         Integer intSize = lstObject.size();
         if (intSize > 0) {
             return lstObject[intSize - 1];
-        } s
+            lstObject.remove(intSize - 1);
+        } else {
+            return null; // exception handler
+        }
 
     }
     
@@ -22,9 +25,20 @@ public class Stack {
     
     public Object peek(){
         //implement peek
+        Integer intSize = lstObject.size();
+        if (intSize > 0) {
+            return lstObject[intSize - 1];
+        } else {
+            return null; // exception handler
+        }
     }
     
     public Boolean isEmpty() {
         //implement isEmpty
+        if (lstObject.size() = 0 || lstObject == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
